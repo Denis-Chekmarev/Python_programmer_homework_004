@@ -37,5 +37,4 @@ def write_file(filename: str, text: str) -> None:
 
 
 k = get_number('Input k -> ')
-print(get_equation(k))
 write_file('004.txt', get_equation(k))

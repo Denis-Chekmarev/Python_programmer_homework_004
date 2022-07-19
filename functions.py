@@ -18,6 +18,29 @@ def input_float_numb(text: str, error_text = 'Wrong input. Try again -> ') -> fl
             print(error_text, end='')
 
 
+def read_file(filename: str) -> str:
+    res = ''
+    with open(filename, 'r', encoding='utf-8') as file:
+        for line in file:
+            res += line
+    return res
+
+
+def write_file(filename: str, text: str) -> None:
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write(text)
+
+
+def get_super_number(power: int) -> str:
+    if power < 10:
+        return code_power[power]
+    else:
+        res = ''
+        for i in str(power):
+            res += f'{code_power[int(i)]}'
+        return res
+
+
 code_power = {
         0: '\u2070',
         1: '\u00B9',
