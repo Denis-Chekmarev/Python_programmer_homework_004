@@ -43,10 +43,4 @@ def summation(first: list, second: list) -> str:
 
 first_equation = format_equation(read_file('004.txt'))
 second_equation = format_equation(read_file('005.txt'))
-
-print(first_equation)
-print(second_equation)
-print()
-
-print(summation(first_equation, second_equation))
 write_file('result.txt', summation(first_equation, second_equation))
